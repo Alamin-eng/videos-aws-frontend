@@ -1,0 +1,26 @@
+.header{
+    color:blueviolet;
+    display: grid;
+    grid-template-columns: 80px 150px 2.5fr 1fr 200px;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    text-align: center;
+}
+
+.header-gif{
+    max-height: 10vh;
+    border-radius: 10px;
+}
+
+.header-search, .header-addbuttons{
+    border-right: 1px solid rgb(94, 94, 94);
+    margin: 2%;
+    padding-right: 5%;
+}
+
+.search{
+    border: 1px solid rgb(129, 129, 130);
+   
+    padding: 2%;
+}
