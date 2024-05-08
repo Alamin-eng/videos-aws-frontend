@@ -4,8 +4,9 @@
     grid-template-columns: 80px 150px 2.5fr 1fr 200px;
     justify-content: center;
     align-items: center;
-    padding: 1%;
+    padding: 0 1%;
     text-align: center;
+    background-color: rgb(16, 9, 9);
 }
 
 .header-gif{
