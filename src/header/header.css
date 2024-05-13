@@ -1,5 +1,5 @@
 .header{
-    color:blueviolet;
+    color:rgb(187, 0, 25);
     display: grid;
     grid-template-columns: 80px 150px 2.5fr 1fr 200px;
     justify-content: center;
