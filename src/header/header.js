@@ -1,6 +1,6 @@
 // import gif from '../../public/video-drama.gif';
 import gif from "../assets/video-drama.gif";
-import user from "../assets/account_circle_.svg";
+
 import "./header.css";
 
 export default function Header() {
@@ -9,8 +9,9 @@ export default function Header() {
       <div className="header-img">
         <img className="header-gif" src={gif} alt="animated gif" />
       </div>
-      <div>
-        <h1>Vidoes library</h1>
+      <div className="header-title">
+        <div className="header-library">LIBRARY</div>
+        <div className="header-tube">TUBE</div>
       </div>
       <div className="header-search">
         <div className="search">search</div>
