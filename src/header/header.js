@@ -10,11 +10,12 @@ export default function Header() {
         <img className="header-gif" src={gif} alt="animated gif" />
       </div>
       <div className="header-title">
-        <div className="header-library">LIBRARY</div>
-        <div className="header-tube">TUBE</div>
+        <div className="header-youtube">YouTube</div>
+        <div className="header-library">Library</div>
       </div>
       <div className="header-search">
-        <div className="search">search</div>
+        <div className="search">search logo</div>
+        <input className="search-input" type="search" placeholder="       search"/>
       </div>
       <div className="header-addbuttons">
         <svg
