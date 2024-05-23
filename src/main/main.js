@@ -1,5 +1,6 @@
 import "./main.css";
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Main() {
   const [data, setData] = useState([]);
@@ -8,18 +9,17 @@ export default function Main() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
+        const response = await axios.get(
           "https://videos-aws-backend.onrender.com/"
         );
-        if (!response.ok) {
-          throw new Error(loading);
-        }
-        const result = await response.json();
 
-        setData(result);
-        setLoading(false);
-        console.log(data);
+        if (!response.data) {
+          throw new Error(loading);
+        } else {
+          console.log(response.data);
+        }
       } catch (error) {
+        error= {"reply": "Server not responding"}
         console.log(error);
       }
     };
@@ -29,4 +29,4 @@ export default function Main() {
 
   return <div className="main"></div>;
 }
-//Re edit from scratch. The api data receving successfully
+//Re edit loading and fix the if statement. The api data receving successfully
