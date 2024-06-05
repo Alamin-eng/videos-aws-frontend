@@ -15,7 +15,7 @@ export default function MainCard({props}) {
     <div className="main-card">
     {props.map((el,ind) =>{
         return (
-          <Card variant="outlined" sx={{ width: 280 }} key={ind}>
+          <Card variant="solid" sx={{ width: 280 }} key={ind}>
             <CardOverflow>
               <AspectRatio ratio="2">
                 <img
