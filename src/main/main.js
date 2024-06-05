@@ -1,7 +1,8 @@
 import "./main.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
- 
+import MainCard from "./card";
+
 export default function Main() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -11,7 +12,7 @@ export default function Main() {
     
     const fetchData = async () => {
        try {
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        
         const response = await axios.get(
           "https://videos-aws-backend.onrender.com/"
         );
@@ -38,11 +39,7 @@ export default function Main() {
       {loading ? (
         "Loading, please wait!"
       ) : data.length > 0 ? (
-        <ul>
-          {data.map((item, index) => (
-            <li key={index}>{JSON.stringify(item)}</li>
-          ))}
-        </ul>
+        <MainCard props={data}/>
       ) : (
         "No data available."
       )}
