@@ -1,6 +1,6 @@
 .main-card{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, .75fr);
     gap:5px;
-    padding: 5%;
+    padding: 2%;
 }

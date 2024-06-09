@@ -4,8 +4,8 @@
   font-family: "Fjalla One", sans-serif;
   color: rgb(168, 11, 11);
   display: grid;
-  grid-template-columns: 80px 100px 1fr 120px 100px;
-  gap: 25px;
+  grid-template-columns: .2fr .25fr 1fr repeat(2, .2fr);
+  gap: 10px;
   justify-content: center;
   align-items: center;
   padding: 1%;
