@@ -18,7 +18,7 @@ export default function MainCard({ props }) {
     >
       {props.map((el, ind) => {
         return (
-          <Card variant="solid" sx={{ minWidth: 300, flexGrow: 1 }} key={ind}>
+          <Card variant="solid" sx={{ minWidth: 280, flexGrow: 1 }} key={ind}>
             <CardOverflow>
               <AspectRatio ratio="2">
                 {el.url.includes("youtube.com") ||
@@ -33,7 +33,7 @@ export default function MainCard({ props }) {
                     allowFullScreen
                   ></iframe>
                 ) : (
-                  <video width="300" height="200" controls muted>
+                  <video width="280" height="180" controls muted>
                     <source src={el.url} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
@@ -56,22 +56,30 @@ export default function MainCard({ props }) {
                 <Favorite />
               </IconButton>
             </CardOverflow>
-            <CardContent>
-              <Typography level="title-md" textColor="inherit">
-                <Link
-                  href="#multiple-actions"
-                  overlay
-                  underline="none"
-                  color="success"
-                  variant="plain"
+            <CardOverflow variant="plain" sx={{ height: "100px" }}>
+              <CardContent>
+                <Typography
+                  level="body-md"
+                  fontWeight={600}
+                  sx={{ color: "rgb(12, 193, 234)" }}
                 >
                   {el.title}
-                </Link>
-              </Typography>
-              <Typography level="body-sm">
-                <Link href="#multiple-actions">Channel link</Link>
-              </Typography>
-            </CardContent>
+                </Typography>
+                <Divider
+                  orientation="horizontal"
+                  sx={{ background: "rgb(179, 179, 179)", width: "60%" }}
+                />
+                <Typography level="body-sm">
+                  <Link
+                    fontWeight={500}
+                    href="#multiple-actions"
+                    sx={{ color: "rgb(220, 168, 70)" }}
+                  >
+                    Channel link
+                  </Link>
+                </Typography>
+              </CardContent>
+            </CardOverflow>
             <CardOverflow variant="soft">
               <Divider inset="context" />
               <CardContent orientation="horizontal">
@@ -87,21 +95,3 @@ export default function MainCard({ props }) {
   );
 }
 
-// <Card component="li" key={ind} sx={{ minWidth: 300, flexGrow: 1 }}>
-//             {el.url.includes("youtube.com") || el.url.includes("youtu.be") ? (
-//               <iframe
-//                 width="300"
-//                 height="200"
-//                 src={el.url.replace("watch?v=", "embed/")}
-//                 title="YouTube video player"
-//                 frameBorder="0"
-//                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-//                 allowFullScreen
-//               ></iframe>
-//             ) : (
-//               <video width="300" height="200" controls muted>
-//                 <source src={el.url} type="video/mp4" />
-//                 Your browser does not support the video tag.
-//               </video>
-//             )}
-//           </Card>
