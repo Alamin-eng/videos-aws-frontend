@@ -43,9 +43,10 @@ export default function MainCard({ props }) {
                 aria-label="Like minimal photography"
                 size="md"
                 variant="solid"
-                color="danger"
                 sx={{
                   position: "absolute",
+                  backgroundColor: "rgb(199, 237, 244)",
+                  color: "rgb(203, 3, 63)",
                   zIndex: 2,
                   borderRadius: "50%",
                   right: "1rem",
@@ -71,7 +72,7 @@ export default function MainCard({ props }) {
                 />
                 <Typography level="body-sm">
                   <Link
-                    fontWeight={500}
+                    fontWeight={600}
                     href="#multiple-actions"
                     sx={{ color: "rgb(220, 168, 70)" }}
                   >
