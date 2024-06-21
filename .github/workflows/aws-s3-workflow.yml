@@ -1,4 +1,5 @@
 name: AWS S3 deploy CLI
+
 on:
   push:
     branches:
