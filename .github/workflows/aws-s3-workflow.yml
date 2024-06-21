@@ -3,7 +3,7 @@ name: AWS S3 deploy CLI
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
