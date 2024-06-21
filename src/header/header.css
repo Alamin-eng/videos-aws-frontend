@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&family=Teko:wght@300..700&display=swap');
 .header {
   font-family: "Fjalla One", sans-serif;
-  color: rgb(168, 11, 11);
+  color: rgb(173, 10, 10);
   display: grid;
   grid-template-columns: .2fr .25fr 1fr repeat(2, .2fr);
   gap: 10px;
